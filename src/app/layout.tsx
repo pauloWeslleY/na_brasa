@@ -1,6 +1,8 @@
+import "../sass/global.sass";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import type { Metadata } from "next";
 import { Lobster, Open_Sans } from "next/font/google";
-import "./scss/global.sass";
 
 const lobster = Lobster({
   variable: "--font-lobster",
@@ -14,7 +16,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Na Brasa",
+  title: "NA BRASA CHURRASCARIA",
   description: "Your favorite place for delicious grilled food!",
 };
 

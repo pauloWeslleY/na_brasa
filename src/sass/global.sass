@@ -1,0 +1,39 @@
+@use 'main' as *
+@use 'header'
+@use 'section'
+@use 'team_content'
+@use 'testimonials'
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+  ::-webkit-scrollbar
+    width: 8px
+
+  ::-webkit-scrollbar-track
+    width: 6px
+    background: $white
+
+  ::-webkit-scrollbar-thumb
+    background: $brown_lighting
+    border-radius: 24px
+
+    &:hover
+      background: #718096
+
+html
+  height: 100%
+  overflow-X: hidden
+
+body
+  background: linear-gradient(to right, rgba(59, 13, 13, 0.6), rgba(59, 13, 13, 0.8)), url(/images/bg.jpeg) center/cover fixed no-repeat
+  height: 100%
+  font-family: $font_text
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+button
+  cursor: pointer

@@ -1,0 +1,35 @@
+@use '../../sass/utilities' as *
+
+.testimonial__item
+  background: rgba(0,0,0,0.6)
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%)
+  margin-block: auto
+  padding-inline: 6rem
+  padding-block: 2rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 2rem
+
+  @media (min-width: 992px)
+    flex-direction: row
+
+  &_photo
+    align-self: center
+
+    img
+      border-radius: 50%
+
+  &_content
+    align-self: center
+    padding-inline: 2rem
+    color: $white
+
+    h2
+      font-family: $font_main
+      text-transform: capitalize
+      margin-bottom: 1rem
+
+    &_description
+      font-family: $font_text
+      text-align: justify

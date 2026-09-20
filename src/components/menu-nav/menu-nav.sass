@@ -1,0 +1,105 @@
+@use '../../sass/main' as *
+
+.navbar
+  font-family: $font_main
+  background: $brown_darken
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: .5rem 1rem
+  transition: all 1s ease
+
+  @media (max-width: 985px)
+    flex-wrap: wrap
+
+  &__brand
+    transition: all 0.2s ease-in-out
+
+    &:hover
+      transform: scale(1.1)
+
+    &:hover
+      color: $orange_lighting
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 75%
+
+    @media (max-width: 985px)
+      display: flex
+      justify-content: center
+      flex-direction: column
+      width: 100%
+      max-height: 0
+      opacity: 0
+      overflow: hidden
+      transform: translateY(-8px)
+      pointer-events: none
+      transition: max-height .35s ease, opacity .25s ease, transform .35s ease
+
+    .navbar-nav
+      display: flex
+      align-items: center
+      flex-direction: row
+      gap: 1.5rem
+      list-style: none
+
+      @media (max-width: 985px)
+        flex-direction: column
+        gap: 1rem
+
+      .nav-item
+        list-style: none
+
+        .nav-link
+          color: $orange_lighting
+          text-decoration: none
+          display: inline
+          transition: all 1s ease
+          font-size: 23px
+
+          &:hover
+            color: $yellow_darken
+
+.btn__navbar_mobile
+  display: none
+  font-size: 1.25rem
+  line-height: 1
+  background-color: transparent
+  border: 1px solid transparent
+  border-radius: .25rem
+
+  @media (max-width: 985px)
+    display: block
+
+  &:focus
+    outline: none
+
+  &__icons
+    padding: 0.4rem
+    transition: all 1s ease
+
+    .bar
+      width: 30px
+      height: 3px
+      margin: 5px
+      background: $orange_lighting
+      transition: all 0.5s ease
+
+    .bar1.change
+      transform: rotate(45deg) translate(8px, 5px)
+
+    .bar2.change
+      opacity: 0
+
+    .bar3.change
+      transform: rotate(-45deg) translate(6px, -3px)
+
+.navbar__container.open
+  max-height: 500px
+  opacity: 1
+  transform: translateY(0)
+  pointer-events: auto
+  gap: 2rem

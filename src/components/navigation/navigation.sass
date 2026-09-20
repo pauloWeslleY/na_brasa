@@ -1,0 +1,31 @@
+@use '../../sass/main' as *
+
+.navigation__container
+  width: 100%
+  margin-inline: auto
+  padding: 0.5rem
+  background: $brown_darken
+
+  &_row
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+    > h2
+      color: $orange_lighting
+      font-family: $font_main
+      word-spacing: 0.6rem
+      text-transform: capitalize
+
+    .navigation__icons
+      display: flex
+      gap: 0.5rem
+
+      > i
+        color: $orange_lighting
+        transition: color 0.3s ease-in-out
+        cursor: pointer
+
+        &:hover
+          color: $orange_darken
