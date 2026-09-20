@@ -1,0 +1,106 @@
+@use '../../sass/utilities' as *
+
+.lightbox
+  position: fixed
+  inset: 0
+  z-index: 9999
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 2rem
+  background: rgba(0, 0, 0, 0.9)
+  animation: fade-in 200ms ease
+
+.content
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+
+.figure
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 90vw
+  max-height: 90vh
+  margin: 0
+
+.image
+  display: block
+  width: auto
+  height: auto
+  max-width: 90vw
+  max-height: 80vh
+  object-fit: contain
+  transition: transform 200ms ease
+
+  &:hover
+    transform: scale(1.05)
+
+.caption
+  margin-top: 1rem
+  color: #fff
+  font-size: 0.875rem
+  text-align: center
+
+.close
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 2
+  padding: 0
+  border: 0
+  background: transparent
+  color: $white
+  cursor: pointer
+  transition: color 150ms ease
+
+  &:hover
+    color: $brown_lighting
+
+.navigation
+  position: absolute
+  top: 50%
+  z-index: 2
+  transform: translateY(-50%)
+  padding: 1rem
+  border: 0
+  background: transparent
+  color: $white
+  cursor: pointer
+  opacity: 0.7
+  transition: opacity 150ms ease
+
+  &:hover
+    opacity: 1
+
+.previous
+  left: 1rem
+
+.next
+  right: 1rem
+
+@keyframes fade-in
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@media (max-width: 768px)
+  .gallery
+    grid-template-columns: repeat(2, 1fr)
+
+  .lightbox
+    padding: 1rem
+
+  .navigation
+    font-size: 2rem
+
+  .previous
+    left: 0
+
+  .next
+    right: 0
