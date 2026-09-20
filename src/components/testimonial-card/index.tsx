@@ -17,7 +17,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         <Image
           src={testimonial.photo}
           alt="Client"
-          className="rounded-circle testimonial__item_image"
+          className="testimonial__item_image"
           width={100}
           height={100}
         />

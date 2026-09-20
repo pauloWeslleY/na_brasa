@@ -1,6 +1,8 @@
 import { CircleArrowDown } from "lucide-react";
 
 import About from "@/components/about";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 import Kitchen from "@/components/kitchen";
 import MenuNav from "@/components/menu-nav";
 import MenuSlide from "@/components/menu-slide";
@@ -74,10 +76,7 @@ export default function Home() {
           {teams.map((team) => (
             <TeamCard
               key={team.name}
-              team={{
-                ...team,
-                imageSrc: team.photo,
-              }}
+              team={{ ...team, imageSrc: team.photo }}
             />
           ))}
         </div>
@@ -94,6 +93,12 @@ export default function Home() {
           <TestimonialsSlide testimonials={testimonials} />
         </div>
       </section>
+
+      <section id="contact" className="container">
+        <Contact />
+      </section>
+
+      <Footer />
     </main>
   );
 }
