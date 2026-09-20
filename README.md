@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Na Brasa
 
-## Getting Started
+Aplicacao web de uma churrascaria desenvolvida com Next.js, React e SASS.
 
-First, run the development server:
+## Visao geral
+
+O projeto apresenta uma landing page com secoes de:
+
+- navegacao principal com menu responsivo
+- cardapio (pratos e bebidas) com slides
+- sobre
+- equipe
+- cozinha
+- depoimentos
+- contato
+- rodape e botao de voltar ao topo
+
+## Tecnologias
+
+- Next.js 16
+- React 19
+- TypeScript
+- SASS
+- Swiper
+- Lucide React
+- Font Awesome
+
+## Requisitos
+
+- Node.js 20+
+- pnpm 12+
+
+## Como executar
+
+Instale as dependencias:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Inicie o ambiente de desenvolvimento:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abra em:
 
-## Learn More
+```text
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts disponiveis
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev    # executa em modo desenvolvimento
+pnpm build  # gera build de producao
+pnpm start  # sobe a aplicacao em modo producao
+pnpm lint   # executa o lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estrutura principal
 
-## Deploy on Vercel
+```text
+src/
+	app/
+		layout.tsx
+		page.tsx
+	components/
+		about/
+		button/
+		contact/
+		footer/
+		icon-button-back-to-top/
+		kitchen/
+		menu-card-item/
+		menu-nav/
+		navigation/
+		slide/
+		team-card/
+		testimonial-card/
+		menu-slide.tsx
+		section-header.tsx
+		testimonials-slide.tsx
+	data/
+	sass/
+public/
+	images/
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design e estilos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Os estilos globais estao em `src/sass/global.sass`.
+- O projeto utiliza arquitetura por componente, com arquivo SASS local em cada pasta de componente.
+
+## Licenca
+
+Uso interno do projeto.
