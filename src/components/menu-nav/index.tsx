@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import Button from "../button/button";
+import Modal from "../modal";
 
 const MENU_NAV_LIST = [
   { href: "#icons_top", label: "Home" },
@@ -19,6 +20,7 @@ const MENU_NAV_LIST = [
 
 const MenuNav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const btn = document.querySelectorAll(".bar");
@@ -41,6 +43,8 @@ const MenuNav = () => {
 
   return (
     <nav className="navbar">
+      <Modal open={isModalOpen} onOpen={setIsModalOpen} />
+
       <div className="navbar__brand">
         <Image
           src="/images/logo/ilaranjaescuro.png"
@@ -74,7 +78,7 @@ const MenuNav = () => {
           ))}
         </ul>
 
-        <Button>Pedir Agora</Button>
+        <Button onClick={() => setIsModalOpen(true)}>Pedir Agora</Button>
       </div>
     </nav>
   );
