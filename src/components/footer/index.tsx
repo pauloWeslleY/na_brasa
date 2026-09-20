@@ -17,15 +17,6 @@ const Footer = () => {
           </a>
         </h2>
       </div>
-
-      <a
-        href="#icons_top"
-        id="back_to_top"
-        className="p-1"
-        title="Voltar ao Topo da pagina"
-      >
-        <i className="fas fa-arrow-circle-up fa-3x"></i>
-      </a>
     </footer>
   );
 };

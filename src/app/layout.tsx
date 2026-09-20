@@ -4,6 +4,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import type { Metadata } from "next";
 import { Lobster, Open_Sans } from "next/font/google";
 
+import IconButtonBackToTop from "@/components/icon-button-back-to-top";
+
 const lobster = Lobster({
   variable: "--font-lobster",
   subsets: ["latin"],
@@ -23,7 +25,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${lobster.variable} ${openSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <IconButtonBackToTop />
+      </body>
     </html>
   );
 }

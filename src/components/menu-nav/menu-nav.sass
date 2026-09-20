@@ -1,5 +1,16 @@
 @use '../../sass/main' as *
 
+.navbar-top
+  padding: 5px 20px !important
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 3
+  transform: translateY(0)
+  opacity: 1
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.479)
+
 .navbar
   font-family: $font_main
   background: $brown_darken
@@ -7,7 +18,7 @@
   align-items: center
   justify-content: space-between
   padding: .5rem 1rem
-  transition: all 1s ease
+  transition: transform 0.4s ease, opacity 0.4s ease
 
   @media (max-width: 985px)
     flex-wrap: wrap

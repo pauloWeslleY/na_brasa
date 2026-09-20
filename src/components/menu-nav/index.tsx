@@ -23,6 +23,29 @@ const MenuNav = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
+    const navbar = document.querySelector(".navbar");
+    if (!navbar) return;
+
+    const handleScroll = () => {
+      const position = window.scrollY;
+      if (position >= 835) {
+        navbar.classList.add("navbar-top");
+      } else {
+        navbar.classList.remove("navbar-top");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Verifica a posição inicial da página
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const btn = document.querySelectorAll(".bar");
     const navbar = document.querySelector(".navbar__container");
     if (!btn || btn.length === 0 || !navbar) {
